@@ -39,8 +39,8 @@ public class UsuarioDAOTest {
 
         usuarioDAO.salvar(usuario);
 
-        Usuario foundUsuario = usuarioDAO.porId(usuario.getId());
-        assertEquals(usuario, foundUsuario);
+        Usuario usuarioEncontrado = usuarioDAO.porId(usuario.getId());
+        assertEquals(usuario, usuarioEncontrado);
     }
 
     @Test
@@ -49,12 +49,12 @@ public class UsuarioDAOTest {
 
         usuarioDAO.salvar(usuario);
 
-        Usuario foundUsuario = usuarioDAO.porNomeEEmail("Tiago Belo", "tiago@example.com");
-        assertEquals(usuario, foundUsuario);
+        Usuario usuarioEncontrado = usuarioDAO.porNomeEEmail("Tiago Belo", "tiago@example.com");
+        assertEquals(usuario, usuarioEncontrado);
     }
 
     @Test
-    public void testSalvar() {
+    public void testSalvarUsuario() {
 
         Usuario usuario = new Usuario("Tiago Belo","tiago@example.com");
 
@@ -64,19 +64,19 @@ public class UsuarioDAOTest {
     }
 
     @Test
-    public void testRemover() {
+    public void testRemoverUsuario() {
         Usuario usuario = new Usuario("Tiago Belo","tiago@example.com");
 
         usuarioDAO.salvar(usuario);
 
         usuarioDAO.remover(usuario);
 
-        Usuario foundUsuario = usuarioDAO.porNomeEEmail(usuario.getNome(),usuario.getEmail());
-        assertNull(foundUsuario);
+        Usuario usuarioEncontrado = usuarioDAO.porNomeEEmail(usuario.getNome(),usuario.getEmail());
+        assertNull(usuarioEncontrado);
     }
 
     @Test
-    public void testAtualizar() {
+    public void testAtualizarUsuario() {
         Usuario usuario = new Usuario("Tiago Belo","tiago@example.com");
 
         usuarioDAO.salvar(usuario);
@@ -85,7 +85,7 @@ public class UsuarioDAOTest {
 
         usuarioDAO.atualizar(usuario);
 
-        Usuario UpdatedUsuario = usuarioDAO.porNomeEEmail("Tiago Lindo",usuario.getEmail());
-        assertEquals("Tiago Lindo", UpdatedUsuario.getNome());
+        Usuario usuarioAtualizado = usuarioDAO.porNomeEEmail("Tiago Lindo",usuario.getEmail());
+        assertEquals("Tiago Lindo", usuarioAtualizado.getNome());
     }
 }

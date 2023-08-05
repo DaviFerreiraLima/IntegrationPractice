@@ -27,7 +27,7 @@
 			<property name="hibernate.jdbc.batch_size" value="50"/>
 			<property name="hibernate.cache.user_query_cache" value="true"/>
 			<property name="hibernate.generate_statistics" value="true"/>
-			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<property name="hibernate.hbm2ddl.auto" value="validate"/>
 						     		
 		</properties>
 
