@@ -33,7 +33,7 @@ public class UsuarioDAOTest {
     }
 
     @Test
-    public void testPorId() {
+    public void testPorIdSucesso() {
 
         Usuario usuario = new Usuario("Tiago Belo","tiago@example.com");
 
@@ -44,7 +44,7 @@ public class UsuarioDAOTest {
     }
 
     @Test
-    public void testPorNomeEEmail() {
+    public void testPorNomeEEmailSucesso() {
         Usuario usuario = new Usuario("Tiago Belo","tiago@example.com");
 
         usuarioDAO.salvar(usuario);
@@ -54,7 +54,7 @@ public class UsuarioDAOTest {
     }
 
     @Test
-    public void testSalvarUsuario() {
+    public void testSalvarUsuarioSucesso() {
 
         Usuario usuario = new Usuario("Tiago Belo","tiago@example.com");
 
@@ -64,7 +64,7 @@ public class UsuarioDAOTest {
     }
 
     @Test
-    public void testRemoverUsuario() {
+    public void testRemoverUsuarioSucesso() {
         Usuario usuario = new Usuario("Tiago Belo","tiago@example.com");
 
         usuarioDAO.salvar(usuario);
@@ -76,7 +76,7 @@ public class UsuarioDAOTest {
     }
 
     @Test
-    public void testAtualizarUsuario() {
+    public void testAtualizarUsuarioSucesso() {
         Usuario usuario = new Usuario("Tiago Belo","tiago@example.com");
 
         usuarioDAO.salvar(usuario);
